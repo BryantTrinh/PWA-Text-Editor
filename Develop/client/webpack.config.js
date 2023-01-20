@@ -3,8 +3,8 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
+// TODO/DONE: Add and configure workbox plugins for a service worker and manifest file.
+// TODO/DONE: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
   return {
@@ -18,16 +18,21 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      new WebpackPwaManifest({
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title:'J.A.T.E.- Just Another Text Editor'
+      }),
+       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'Just AnotherText Editor',
         short_name: 'J.A.T.E.',
+         start_url: './',
+         publicPath: './',
+         display: "standalone",
         description: 'Text editor that can also be used offline!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './',
-        publicPath: './',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -36,13 +41,9 @@ module.exports = () => {
           },
         ],
       }),
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        title:'J.A.T.E.- Just Another Text Editor'
-      }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: '.src-sw.js',
+        swDest: 'src-sw.js',
       })
     ],
 
