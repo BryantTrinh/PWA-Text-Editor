@@ -2,9 +2,6 @@
   "name": "JATE- Just Another Text Editor",
   "version": "1.0.0",
   "main": "server.js",
-  "engines" : {
-    "node": "16.x"
-  },
 
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
