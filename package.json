@@ -4,7 +4,7 @@
   "engines" : {
     "node": "16.15.0"
   }
-  "description": "",
+  "description": "Text editor",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
