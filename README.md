@@ -29,7 +29,15 @@ Provide instructions and examples for use. Include screenshots as needed.
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
  
-![Picture of the text editor's functionality. User types "Hello, how are you 01/20/2023](./client/src/images/856ab12ca22fd31f2d8901eabe1ae4f6.png)
+![Picture of the text editor's functionality. User types "Hello, how are you 01/20/2023](./client/src/images/1st-picture.png)
+
+![Picture of manifest for online.](./client/src/images/2nd-pic-manifest.png)
+
+![Picture of the downloaded app along with showing service workers](./client/src/images/3rd-pic-app-sw.png)
+
+![Picture of user showing the indexDb that was created with JATE. ](./client/src/images/4th-pipc-index-db.png)
+
+
 
 
 ## Contributers
